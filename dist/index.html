@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="按章节循序学习抽样方法，结合讲义、阶段计划、随堂自测与复习清单备考。">
+  <title>抽样课程 · 学习与备考</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="抽样课程首页"><span class="brand-mark">S</span><span>STUDY / SAMPLING</span></a>
+    <nav aria-label="主导航"><a href="#roadmap">学习路径</a><a href="#plan">复习计划</a><a href="#review">自测与整理</a></nav>
+    <a class="top-cta" href="#roadmap">继续学习 <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> YOUR EXAM STUDY SPACE <span class="eyebrow-line"></span> 01 — 06</div>
+        <h1>把抽样方法，<br><em>一步一步学扎实。</em></h1>
+        <p class="hero-intro">从抽样为什么重要开始，逐章掌握估计方法与抽样设计。每节都有站内讲解、公式拆解、例题和练习；PDF 作为补充资料。</p>
+        <div class="hero-actions"><a class="button button-dark" href="#learn/ch1/0">从第一章开始 <span>→</span></a><a class="text-link" href="#plan">查看 14 次复习安排 <span>↗</span></a></div>
+        <div class="hero-meta"><div><strong>07</strong><span>节站内课程</span></div><i></i><div><strong>04</strong><span>个递进阶段</span></div><i></i><div><strong id="progressLabel">0%</strong><span>课程进度</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="抽样与总体的抽象图示">
+        <div class="art-stamp">FIELD<br>NOTES<br><small>VOL. 01</small></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sample-dot d1"></div><div class="sample-dot d2"></div><div class="sample-dot d3"></div><div class="sample-dot d4"></div><div class="sample-dot d5"></div><div class="sample-dot d6"></div>
+        <div class="population"><span>POPULATION</span><strong>N</strong></div>
+        <div class="sample"><span>YOUR SAMPLE</span><strong>n</strong></div>
+        <div class="art-caption">从总体出发，找到<br>可解释、可复习的答案。</div>
+        <div class="art-axis">OBSERVE · ESTIMATE · REVIEW</div>
+      </div>
+    </section>
+
+    <section class="progress-strip wrap" aria-live="polite">
+      <div><span class="section-kicker">LEARNING PROGRESS</span><strong id="progressText">刚刚起步 · 选一章开始吧</strong></div>
+      <div class="progress-track"><span id="progressBar"></span></div><span class="progress-count" id="progressCount">0 / 7 完成</span>
+    </section>
+
+    <section class="roadmap section wrap" id="roadmap">
+      <div class="section-heading"><div><span class="section-kicker">THE LEARNING PATH</span><h2>循序渐进的学习路径<span class="heading-dot">.</span></h2></div><p>建议按顺序学。每章完成后打卡，<br>你的进度会保存在当前浏览器。</p></div>
+      <div class="phase-row"><span class="phase-number">PHASE 01</span><div class="phase-rule"></div><span class="phase-name">理解抽样与基本估计</span></div>
+      <div class="lesson-grid" id="lessonGrid"></div>
+      <div class="phase-row later"><span class="phase-number">PHASE 02</span><div class="phase-rule"></div><span class="phase-name">选择抽样设计 · 综合复习</span></div>
+      <div class="lesson-grid" id="lessonGridAdvanced"></div>
+    </section>
+
+    <section class="plan-section" id="plan"><div class="wrap plan-layout">
+      <div class="plan-intro"><span class="section-kicker light">A STEADY STUDY RHYTHM</span><h2>给备考一个<br><em>可执行的节奏。</em></h2><p>将课程拆成 14 次学习任务。每次大约 40–60 分钟：先学站内讲解，再闭卷回忆，最后记录一个仍不确定的问题。</p><div class="plan-note"><span>↗</span><p>时间可按考试日期压缩或拉长。优先补齐未掌握的章节，再做整套回顾。</p></div></div>
+      <div class="plan-list" id="planList"></div>
+    </div></section>
+
+    <section class="review section wrap" id="review">
+      <div class="section-heading"><div><span class="section-kicker">ACTIVE RECALL</span><h2>合上讲解，检验理解<span class="heading-dot">.</span></h2></div><p>先自己作答，再展开答案。<br>复习结果会留在本页，方便回看。</p></div>
+      <div class="review-layout">
+        <div class="quiz-card"><div class="quiz-top"><span class="section-kicker">QUICK CHECK · <span id="quizNumber">01</span>/06</span><span class="quiz-tag">自我检测</span></div><h3 id="quizQuestion"></h3><div class="quiz-options" id="quizOptions"></div><div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div><div class="quiz-actions"><button class="button button-dark" id="checkAnswer">检查答案 <span>↗</span></button><button class="button button-quiet" id="nextQuestion">下一题 →</button></div></div>
+        <aside class="review-side"><div class="side-label">考前回看清单 <span>03 ITEMS</span></div><label class="review-item"><input type="checkbox" data-review="formula"><span class="custom-check"></span><span><strong>能从记忆写出核心估计量</strong><small>均值、比例、比率与分层估计</small></span></label><label class="review-item"><input type="checkbox" data-review="compare"><span class="custom-check"></span><span><strong>会解释设计选择与假设</strong><small>何时分层？辅助变量有什么用？</small></span></label><label class="review-item"><input type="checkbox" data-review="mistakes"><span class="custom-check"></span><span><strong>重做错题并说明错因</strong><small>不只记答案，也说清推理步骤</small></span></label><div class="notes-box"><label for="studyNote">留一个问题给下一次复习</label><textarea id="studyNote" placeholder="例如：我还需要弄清楚……" rows="3"></textarea><span id="savedNote">自动保存在本设备</span></div></aside>
+      </div>
+    </section>
+    <section class="finish-band"><div class="wrap finish-inner"><span class="finish-icon">↗</span><div><span class="section-kicker">ONE STEP AT A TIME</span><h2>今天先完成一小步。</h2><p>先跟着站内讲解学一遍，再合上答案复述；讲义留作需要时的补充。</p></div><a class="button button-light" href="#roadmap">回到学习路径 <span>↑</span></a></div></section>
+  </main>
+  <main class="course-page wrap" id="coursePage" hidden></main>
+  <footer class="footer wrap"><a class="brand" href="#home"><span class="brand-mark">S</span><span>STUDY / SAMPLING</span></a><span>为抽样课程整理的个人备考空间</span><a href="#home">回到顶部 ↑</a></footer>
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="app.js"></script>
+  <script src="math-content.js"></script>
+  <script src="chapter-ui.js"></script>
+</body>
+</html>
